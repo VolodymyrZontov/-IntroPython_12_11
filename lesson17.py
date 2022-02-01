@@ -12,6 +12,10 @@ class PlayAlphabet:
         self._dir_name = dirname
         self.__create_dir()
 
+    @property
+    def dir_name(self):
+        return self._dir_name
+
     def __create_dir(self):
         os.makedirs(self._dir_name, exist_ok=True)
 
@@ -36,7 +40,7 @@ play_test = PlayAlphabet(dir_name)
 play_test.create_files()
 play_test.do_tanos_click()
 play_test._dir_name = "aaa"
-play_test._PlayAlphabet__create_dir()
+# play_test._PlayAlphabet__create_dir()
 
 
 
